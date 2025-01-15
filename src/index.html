@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./script.js" defer></script>
+    <style>
+      .answerOption {
+        --tw-bg-opacity:
+        background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+        padding: 4px;
+        border-radius: 6px;
+      }
+      .answerOption:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(107 33 168 / var(--tw-bg-opacity, 1));
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 flex justify-center items-center h-screen w-screen">
+    <main
+      class="bg-gray-800 w-[400px] p-[28px] text-white rounded-md"
+      id="container"
+    >
+      <h1 class="text-4xl font-extrabold text-center mb-6">Quiz</h1>
+      <div id="quiz-container">
+
+
+        <div id="question-container" class="text-center hidden">
+          <h2
+            id="quiz-question"
+            class="text-2xl text-center mb-4 font-bold rounded-md p-3"
+          >
+            
+          </h2>
+          <ul
+            id="choices-list"
+            class="list-none text-center text-xl font-semibold flex flex-col gap-4 mb-5"
+          >
+            <!-- Choices will be added here -->
+            <!-- <li class="answerOption">Answer</li>
+            <li class="answerOption">Answer</li>
+            <li class="answerOption">Answer</li>
+            <li class="answerOption">Answer</li> -->
+          </ul>
+
+          <button
+            id="next-btn"
+            class="text-white p-2 bg-purple-700 rounded-md hover:bg-purple-800 hidden"
+          >
+            Next Question
+          </button>
+        </div>
+
+
+        <div id="result-container" class="text-center hidden">
+          <h2 class="text-xl font-bold mb-3">Your Score:</h2>
+          <p id="score" class="text-lg font-medium mb-3"></p>
+          <button
+            id="restart-quiz"
+            class="text-white p-2 bg-purple-700 rounded-md hover:bg-purple-800"
+          >
+            Restart Quiz
+          </button>
+        </div>
+
+
+        <button
+          class="text-white p-2 bg-purple-700 rounded-md hover:bg-purple-800 w-full"
+          id="startBtn"
+        >
+          Start Quiz
+        </button>
+
+        
+      </div>
+    </main>
+  </body>
+</html>
